@@ -1,12 +1,14 @@
 package com.example.eurekaclient.controller;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Profile;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/query")
+@Profile({"zone1","zone2","west","east"})
 public class QueryController {
 
     @Value("${eureka.instance.metadata-map.zone}")
