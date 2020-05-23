@@ -6,3 +6,8 @@ Spring Cloud Eureka 的demo，主要来源于《重新定义Spring Cloud 实战�
 127.0.0.1 eureka.server.com
 127.0.0.1 eureka.client.com
 ```
+
+项目中存在多个profile，而且eureka-client、eureka-server、zuul的profile是相对的，运行时需要指定profile运行,如以下指定以cli运行，对应的配置文件为application-cli.properties:
+```
+-Dspring.profiles.active=cli
+```
